@@ -120,6 +120,14 @@ After the search, I found an exploitation of a security vulnerability , and ther
 
 you can read more about **dbus-daemon**  from herer [dbus-daemon ](https://linux.die.net/man/1/dbus-daemon).
 ![Screenshot from 2020-09-24 03-42-52](https://user-images.githubusercontent.com/36403473/94091664-14832d00-fe19-11ea-9cd8-cf063fad6bd3.png)
+After researching, I found that there was indeed a security issue in USBCreator D-Bus Privilege Escalation in Ubuntu Desktop.
+[USBCreator D-Bus Privilege Escalation ](https://unit42.paloaltonetworks.com/usbcreator-d-bus-privilege-escalation-in-ubuntu-desktop/)
+
+The explanation of the exploitation is that I can copy the content of a file or modify it to a file without obtaining permission from the owner of that file\
+ The idea is that I created a test.txt file in tmp directory  and copied the contents of the `root/root.txt` to `tmp/test.txt` by **gdbus** commnad that i found in the USBCreator D-Bus exploit.
+
+![Screenshot from 2020-09-23 23-11-32](https://user-images.githubusercontent.com/36403473/94148032-64441180-fe76-11ea-9f5d-0deba52540a8.png)
+
 
 
 
